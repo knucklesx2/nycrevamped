@@ -255,7 +255,7 @@ p1 {
 #logo a {
     color: #443a36;
     text-decoration: none;
-    text-shadow: -1px 0 #f5e9d2, 0 1px #A8956f, 1px 0 #898e8c, 0 -1px #443a36;
+    text-shadow: -1px 0 #A8956f, 0 1px #f5e9d2, 1px 0 #898e8c, 0 -1px #443a36;
 
 }
 
@@ -454,6 +454,7 @@ This class makes the topnav look good on small screens (display the links vertic
         text-align: left;
     }
 
+
     img,
     video {
         width: auto;
@@ -509,11 +510,4 @@ This class makes the topnav look good on small screens (display the links vertic
         position: absolute;
 
     }
-
-
-
-
-
-
-
 
