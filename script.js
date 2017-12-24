@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("p5").click(function () {
+    $("h4").click(function () {
         $(this).hide();
     });
 });

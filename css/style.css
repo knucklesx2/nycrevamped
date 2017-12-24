@@ -20,8 +20,12 @@ video {
     article.main {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: repeat(5, max-content);
-        grid-template-areas: "hero hero hero" "title sidebar detail" "intro sidebar map" "text text text";
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas:
+            "hero hero hero"
+            "title sidebar detail"
+            "intro sidebar map"
+            "text text footer";
 
         grid-gap: 20px;
 
@@ -41,6 +45,7 @@ video {
     }
     .detailimages {
         grid-area: detail;
+
     }
     .text {
         grid-area: text;
@@ -71,7 +76,7 @@ video {
 /* ---------------------------
   this uses flexbox to center the content in the boxes. it also gives them some styling.
    The CSS below is not required for the grid layout. */
-    .style: text-css;
+    style: text-css;
 
     header,
     article,
@@ -81,7 +86,8 @@ video {
         justify-content: center;
         align-items: center;
         background-color: #b8bbba;
-        border: 2px; solid #333;
+        border: 2px;
+        solid #333;
     }
 
     /*  height: 10em;  */
@@ -198,20 +204,22 @@ p.five {
     padding-right: 15px;
 }
 
-p6 {
+p.six,
+footer {
     font-family: 'Marck Script', cursive;
     font-size: 1.1em;
 }
 
-p5 {
+p.five {
     font-family: 'Kite One', sans-serif;
     color: #443a36;
     margin: 50px;
     font-weight: bold;
     line-height: 1.7em;
+    text-indent: 50px;
 }
 
-p4 {
+p.four {
     font-family: 'Averia Libre', cursive;
     color: #443a36;
     font-style: italic;
@@ -227,7 +235,7 @@ p3 {
     line-height: 1.2em;
 }
 
-p2 {
+p.two {
     font-family: 'Mclaren', cursive, sans-serif;
     font-weight: bold;
     color: #443a36;
@@ -235,7 +243,7 @@ p2 {
 }
 
 
-p1 {
+p.one {
     font-family: 'Averia Libre', cursive;
     font-weight: bold;
     color: #443a36;
@@ -326,7 +334,7 @@ a {
     text-decoration: none;
 }
 
-p1 img {
+p.one img {
     float: left;
     clear: right;
     margin-left: 4px;
@@ -336,7 +344,7 @@ p1 img {
     padding: 2px;
 }
 
-p2 img {
+p.two img {
     float: left;
     clear: right;
     margin-left: 4px;
@@ -454,7 +462,6 @@ This class makes the topnav look good on small screens (display the links vertic
         text-align: left;
     }
 
-
     img,
     video {
         width: auto;
@@ -464,15 +471,7 @@ This class makes the topnav look good on small screens (display the links vertic
 
     .mygrid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-
-    @supports (grid-area: auto) {
-        /*   This base rule is not in a media query and will apply to all sizes */
-        .boxes {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
+        grid-template-columns: 1fr;
     }
 
     /*   This rule only applies to screen sizes between 600 and 899 px wide. */
@@ -491,7 +490,7 @@ This class makes the topnav look good on small screens (display the links vertic
     /*   This rule only applies to screen sizes 1200px and larger */
     @media (min-width: 1200px) {
         .boxes {
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: 2fr 1fr 2fr 1fr;
         }
     }
 
@@ -510,4 +509,3 @@ This class makes the topnav look good on small screens (display the links vertic
         position: absolute;
 
     }
-
