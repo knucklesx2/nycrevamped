@@ -1,0 +1,508 @@
+/* Edit the CSS below to create your grid.
+   ============================== */
+
+style.css
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Averia+Libre|Kite+One|Marck+Script|McLaren');
+
+
+/* Basic Responsive Images and Video */
+
+img,
+video {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+@supports (grid-area: auto) {
+    .grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "text footer footer";
+
+        grid-gap: 20px;
+
+    }
+
+    .heroimage {
+        grid-area: hero;
+    }
+    .title {
+        grid-area: title;
+    }
+    .intro {
+        grid-area: intro;
+    }
+    .map {
+        grid-area: map;
+    }
+    .detailimages {
+        grid-area: detail;
+    }
+    .text {
+        grid-area: text;
+    }
+    .articles {
+        grid-area: article;
+    }
+    .sidebar {
+        grid-area: content;
+    }
+    .footer {
+        grid-area: footer;
+    }
+    .footer li {
+        display: inline;
+    }
+
+
+    /* end @supports
+
+
+/* ---------------------------
+  this uses flexbox to center the content in the boxes. it also gives them some styling.
+   The CSS below is not required for the grid layout. */
+    style: text-css;
+
+    header,
+    article,
+    .sidebar,
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #b8bbba;
+        border: 2px;
+        solid #333;
+    }
+
+    /*  height: 10em;  */
+}
+
+header {
+    background-color: #b8bbba;
+    margin-bottom: 15px;
+}
+
+article {
+    background-color: #c9c6ba;
+    color: #443a36;
+}
+
+.sidebar {
+    background-color: #443a36;
+    color: #b8bbba;
+    text-align: center;
+}
+
+.sidebar {
+    font-family: 'Marck Script', sans-serif;
+    margin: 1.5px;
+    padding: 8px;
+    line-height: 1.2em;
+    font-size: 1.3em;
+}
+
+.footer {
+    background-color: #443a36;
+    color: #b8bbba;
+    text-align: center;
+    padding-top: 1px;
+}
+
+h4 {
+    font-family: 'Kite One', sans-serif;
+    color: #443a36;
+    text-shadow: 3px 5px 2px #c9c6ba;
+    margin-left: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+h3 {
+    color: #443a36;
+    text-align: center;
+    font-family: 'Averia Libre', cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Mclaren', cursive;
+    text-align: center;
+    text-shadow: 3px 2px 2px #898e8c;
+    color: #443a36;
+    text-transform: uppercase;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #443a36;
+    text-shadow: 3px 2px 1px #898e8c;
+    font-family: 'Averia Libre', cursive;
+    margin-left: 5px;
+    font-size: 1.4;
+}
+
+.title {
+    font-style: italic;
+    font-size: 1.4em;
+    padding-bottom: 10px;
+}
+
+.subtitle1 {
+    font-style: italic;
+    font-size: 1.4em;
+    margin-bottom: 50px;
+}
+
+.subtitle2 {
+    font-style: italic;
+    font-size: 1.4em;
+    padding-bottom: 30px;
+}
+
+.subtitle3 {
+    font-style: italic;
+    font-size: 1.5em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-transform: capitalize;
+
+}
+
+.subtitle4 {
+    font-style: italic;
+    font-size: 1.3em;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.address {
+    font-size: .8em;
+    text-transform: capitalize;
+}
+
+p.five {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+p.six,
+footer {
+    font-family: 'Marck Script', cursive;
+    font-size: 1.1em;
+}
+
+p.five {
+    font-family: 'Kite One', sans-serif;
+    color: #443a36;
+    margin: 50px;
+    font-weight: bold;
+    line-height: 1.7em;
+    text-indent: 50px;
+}
+
+p.four {
+    font-family: 'Averia Libre', cursive;
+    color: #443a36;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+p3 {
+    font-family: 'Marck Script', cursive;
+    color: #b8bbba;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+p.two {
+    font-family: 'Mclaren', cursive, sans-serif;
+    font-weight: bold;
+    color: #443a36;
+    line-height: 1.4em;
+}
+
+
+p.one {
+    font-family: 'Averia Libre', cursive;
+    font-weight: bold;
+    color: #443a36;
+    line-height: 1.3em;
+    font-size: 1.2em;
+}
+
+
+#logo {
+    text-shadow: 3px 3px 2px #898e8c;
+    font-size: 2.50em;
+    font-family: 'Marck Script', serif;
+    color: #443a36;
+    margin-left: 10px;
+}
+
+#logo a {
+    color: #443a36;
+    text-decoration: none;
+    text-shadow: -1px 0 #A8956f, 0 1px #f5e9d2, 1px 0 #898e8c, 0 -1px #443a36;
+
+}
+
+.heroimage {
+    padding-top: 0px;
+    text-align: center;
+}
+
+span.highlight {
+    background-color: #c9c6ba;
+}
+
+
+img {
+    border-radius: 20px;
+
+}
+
+figcaption {
+    color: #443a36;
+    line-height: 1.0em;
+    font-size: 1.3em;
+    font-family: 'Marck Script', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+p3 ol {
+    background: #443a36;
+    padding: 8px;
+}
+
+p3 ol {
+    list-style: none;
+    counter-reset: li
+}
+
+p3 li::before {
+    content: counter(li);
+    color: #f5e9d2;
+    display: inline-block;
+    width: 1.4em;
+    margin-left: 0em;
+}
+
+p3 li {
+    counter-increment: li
+}
+
+/* mouse over link*/
+
+a:hover,
+a:active {
+    background-color: #A8956f;
+}
+
+body {
+    padding: 1px;
+    background-color: #b8bbba;
+}
+
+a:active {
+    color: #a3aeba;
+}
+
+a {
+    color: #f5e9d2;
+    text-decoration: none;
+}
+
+p.one img {
+    float: left;
+    clear: right;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border: solid #A8956f 2px;
+    padding: 2px;
+}
+
+p.two img {
+    float: left;
+    clear: right;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border: solid #A8956f 2px;
+    padding: 2px;
+}
+
+figcaption img {
+    float: none;
+    clear: none;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    border: solid #A8956f 2px;
+    padding: 2px;
+}
+
+.question {
+    text-align: center;
+    font-family: 'Marck Script', cursive;
+    color: #443a36;
+    font-weight: bold
+}
+
+
+div {
+    clear: both;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+    overflow: hidden;
+    background-color: #443a36;
+    font-family: 'Marck Script', cursive;
+
+}
+
+/* Remove default list styling: remove bullet points from the list and remove default margin */
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav ul li {
+    float: left;
+    text-align: left;
+}
+
+.topnav a {
+    color: #f5e9d2;
+    display: block;
+    padding: 13px 15px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #b8bbba;
+    color: #443a36;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home").
+Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+    .topnav li:not(:first-child) {
+        display: none;
+    }
+    .topnav li.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    img,
+    video {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .mygrid{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    /*   This rule only applies to screen sizes between 600 and 899 px wide. */
+    @media (min-width: 600px) {
+        .boxes {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+    /*   This rule only applies to screen sizes 900px and larger */
+    @media (max-width: 900px) {
+        .boxes {
+            grid-template-columns: 2fr 2fr;
+        }
+    }
+
+    /*   This rule only applies to screen sizes 1200px and larger */
+    @media (min-width: 1200px) {
+        .boxes {
+            grid-template-columns: 2fr 1fr 2fr 1fr;
+        }
+    }
+
+
+    /*
+  =====================================
+  CSS for <iframe> embedded Google Map
+  =====================================
+*/
+    .mapWrapper {
+        position: relative;
+        /*
+    Do math with the height of your iframe divided by the width, then converted to percent
+    In this example the height is 400 and the width is 600
+    400 / 600 = .66666667
+    which is 66.6666667% */
+        padding-bottom: 80.8510639%;
+        height: 0;
+    }
+    .mapWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
