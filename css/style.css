@@ -359,7 +359,7 @@ figcaption img {
     text-align: center;
     font-family: 'Marck Script', cursive;
     color: #443a36;
-    font-weight: bold
+    font-weight: bold;
 }
 
 
@@ -428,6 +428,7 @@ Show the link that contains should open and close the topnav (.icon) */
     .topnav li:not(:first-child) {
         display: none;
     }
+
     .topnav li.icon {
         float: right;
         display: block;
@@ -459,9 +460,9 @@ This class makes the topnav look good on small screens (display the links vertic
         max-width: 100%;
     }
 
-    .mygrid{
+    .mygrid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     /*   This rule only applies to screen sizes between 600 and 899 px wide. */
