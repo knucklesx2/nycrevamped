@@ -1,7 +1,7 @@
 /* Edit the CSS below to create your grid.
    ============================== */
 
-style.css
+css/style.css
 /*fonts*/
 
 @import url('https://fonts.googleapis.com/css?family=Averia+Libre|Kite+One|Marck+Script|McLaren');
@@ -17,14 +17,13 @@ video {
 }
 
 @supports (grid-area: auto) {
-    .grid {
+    article {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: repeat(4, max-content 10em);
-        grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "footer footer footer";
+        grid-template-rows: repeat(5, max-content);
+        grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar detail" "text text text";
 
         grid-gap: 20px;
-
     }
 
     .heroimage {
@@ -39,39 +38,27 @@ video {
     .map {
         grid-area: map;
     }
+
+    .sidebar {
+        grid-area: content;
+    }
+
     .detailimages {
         grid-area: detail;
     }
     .text {
         grid-area: text;
     }
-    .articles {
-        grid-area: article;
-    }
-    .sidebar {
-        grid-area: content;
-    }
     .footer {
         grid-area: footer;
     }
-    .footer li {
-        display: inline;
-    }
-
 
     /* end @supports
 
-
-/* ---------------------------
-  this uses flexbox to center the content in the boxes. it also gives them some styling.
-   The CSS below is not required for the grid layout. */
-    style: text-css;
-
-
     header,
     article,
-    .sidebar,
-    .footer {
+    sidebar,
+    footer{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -85,7 +72,7 @@ video {
 
 header {
     background-color: #b8bbba;
-    margin-bottom: px;
+    margin-bottom: 0px;
 }
 
 article {
@@ -112,6 +99,10 @@ article {
     color: #b8bbba;
     text-align: center;
     padding-top: 1px;
+}
+
+.footer li {
+    display: inline;
 }
 
 h4 {
@@ -185,7 +176,7 @@ h1 {
 }
 
 .address {
-    font-size: .8em;
+    font-size: 1.1em;
     text-transform: capitalize;
 }
 
@@ -498,7 +489,7 @@ This class makes the topnav look good on small screens (display the links vertic
     In this example the height is 400 and the width is 600
     400 / 600 = .66666667
     which is 66.6666667% */
-        padding-bottom: 80.8510639%;
+        padding-bottom: 80.85106382978723%;
         height: 0;
     }
     .mapWrapper iframe {
