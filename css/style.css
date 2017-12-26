@@ -21,7 +21,7 @@ video {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content 10em);
-        grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "text footer footer";
+        grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "footer footer footer";
 
         grid-gap: 20px;
 
@@ -41,19 +41,12 @@ video {
     }
     .detailimages {
         grid-area: detail;
-
     }
     .text {
         grid-area: text;
     }
-    .more-articles {
-        border-top: 1px solid #ffffff;
-        padding: 15px;
-    }
-    .more-articles p {
-        border-bottom: 1px solid #807c72;
-        padding: 5px 0px 15px 0px;
-        font-size: 80%;
+    .articles {
+        grid-area: article;
     }
     .sidebar {
         grid-area: content;
@@ -74,6 +67,7 @@ video {
    The CSS below is not required for the grid layout. */
     style: text-css;
 
+
     header,
     article,
     .sidebar,
@@ -91,7 +85,7 @@ video {
 
 header {
     background-color: #b8bbba;
-    margin-bottom: 15px;
+    margin-bottom: px;
 }
 
 article {
@@ -465,7 +459,7 @@ This class makes the topnav look good on small screens (display the links vertic
         max-width: 100%;
     }
 
-    .mygrid {
+    .mygrid{
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
     }
