@@ -190,7 +190,7 @@ p.five {
     margin: 50px;
     font-weight: bold;
     line-height: 1.7em;
-    text-indent: 50px;
+    indent: 50px;
 }
 
 p.four {
@@ -251,9 +251,12 @@ span.highlight {
 }
 
 
-img {
+img, iframe {
     border-radius: 20px;
 
+}
+
+iframe { border: solid #898e8c 2px;
 }
 
 figcaption {
@@ -335,7 +338,7 @@ figcaption img {
     margin-bottom: 0px;
     margin-top: 0px;
     margin-right: 0px;
-    border: solid #A8956f 2px;
+    border: solid # 2px;
     padding: 2px;
 }
 
@@ -438,7 +441,7 @@ This class makes the topnav look good on small screens (display the links vertic
     }
 
     img,
-    video {
+    video{
         width: auto;
         height: auto;
         max-width: 100%;
