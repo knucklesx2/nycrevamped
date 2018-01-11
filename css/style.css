@@ -27,7 +27,7 @@ video {
             grid-gap: 20px;
         }
 
-        article {
+   home     article {
             display: grid;
             grid-template-columns: 2fr 2fr;
             grid-template-rows: repeat(4, max-content);
@@ -37,7 +37,7 @@ video {
     }
     /* end 900px media query*/
     @media (min-width: 1200px) {
-        article {
+    place    article {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             grid-template-rows: repeat(4, max-content);
@@ -46,7 +46,7 @@ video {
             grid-gap: 20px;
         }
 
-        article {
+   end     article {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             grid-template-rows: repeat(4, max-content);
@@ -360,7 +360,6 @@ video {
         line-height: 1.0em;
         font-size: 1.2em;
     }
-
 
     div {
         clear: both;
