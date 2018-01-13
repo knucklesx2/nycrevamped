@@ -4,7 +4,7 @@
 css/style.css
 /*fonts*/
 
-@import url('https://fonts.googleapis.com/css?family=Averia+Libre|Kite+One|Marck+Script|McLaren');
+@import url('https://fonts.googleapis.com/css?family=Averia+Libre%7cKite+One%7cMarck+Script%7cMcLaren');
 
 
 /* Basic Responsive Images and Video */
@@ -18,39 +18,39 @@ video {
 
 @supports (grid-area: auto) {
     @media (min-width: 900px) {
-        article {
+        article.grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "detail detail detail";
+            grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
 
             grid-gap: 20px;
         }
 
-   home     article {
+        article {
             display: grid;
             grid-template-columns: 2fr 2fr;
             grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero " "title  map" "intro sidebar " "detail detail";
+            grid-template-areas: "hero hero " "title map" "intro aside " "detail detail";
             grid-gap: 20px;
         }
     }
     /* end 900px media query*/
     @media (min-width: 1200px) {
-    place    article {
+        article {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "detail detail detail";
+            grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
 
             grid-gap: 20px;
         }
 
-   end     article {
+        more .article {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero hero" "title sidebar map map" "intro sidebar sidebar text" "detail detail detail detail";
+            grid-template-areas: "hero hero hero hero" "title aside map map" "intro aside text text" "detail detail detail detail";
 
             grid-gap: 20px;
         }
@@ -69,7 +69,7 @@ video {
         grid-area: map;
     }
 
-    .sidebar {
+    .aside {
         grid-area: sidebar;
     }
 
@@ -94,16 +94,16 @@ video {
         color: #443a36;
     }
 
-    .sidebar {
+    .aside {
         background-color: #443a36;
         color: #b8bbba;
         text-align: center;
     }
 
-    .sidebar {
+    .aside {
         font-family: 'Marck Script', sans-serif;
         margin: 1.5px;
-        padding: 8px;
+        padding: 10px;
         line-height: 1.2em;
         font-size: 1.3em;
     }
@@ -116,10 +116,13 @@ video {
     }
 
     .footer {
+        font-family: 'Marck Script', sans-serif;
         background-color: #443a36;
         color: #b8bbba;
         text-align: center;
-        padding-top: 1px;
+        padding-top: 10px;
+        font-size: 1.0em;
+        line-height: 1.1em;
     }
 
     .footer li {
@@ -130,10 +133,10 @@ video {
         font-family: 'Kite One', sans-serif;
         color: #443a36;
         text-shadow: 3px 5px 2px #c9c6ba;
-        margin-left: 30px;
+        margin-left: 10px;
         font-style: italic;
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     h3 {
@@ -142,14 +145,17 @@ video {
         font-family: 'Averia Libre', cursive;
         font-weight: bold;
         text-transform: uppercase;
+        text-shadow: 2px 3px 1px #b8bbba;
+        padding-top: 10px;
     }
 
     h2 {
         font-family: 'Mclaren', cursive;
         text-align: center;
-        text-shadow: 3px 2px 2px #898e8c;
+        text-shadow: 2px 2px 1px #898e8c;
         color: #443a36;
         text-transform: uppercase;
+        padding-top: 10px;
     }
 
     h1 {
@@ -157,14 +163,15 @@ video {
         color: #443a36;
         text-shadow: 3px 2px 1px #898e8c;
         font-family: 'Averia Libre', cursive;
-        margin-left: 5px;
-        font-size: 1.4;
+        margin-left: 4px;
+        font-size: 1.7em;
     }
 
     .title {
         font-style: none;
         font-size: 1.4em;
-        padding-bottom: 10px;
+        padding-top: 20px;
+        margin-right: 7em;
     }
 
     .subtitle {
@@ -179,20 +186,21 @@ video {
         font-size: 1.2em;
         text-transform: capitalize;
     }
-
-    p.six,
-    footer {
+    .page {
         font-family: 'Marck Script', cursive;
-        font-size: 1.1em;
+        font-size: 1em;
+        padding-bottom: 0px;
+        text-align: right;
+        margin-right: 5px;
     }
 
     p.five {
         font-family: 'Kite One', sans-serif;
         color: #443a36;
         margin: 5px;
-        font-weight: bold;
+        font-weight: bolder;
         line-height: 1.7em;
-        text-indent: 50px;
+        text-indent: 30px;
     }
 
     p.four {
@@ -215,7 +223,7 @@ video {
     p.three,
     ol {
         background: #443a36;
-        padding: 8px;
+        padding: 10px;
     }
 
     p.three,
@@ -261,8 +269,8 @@ video {
         font-family: 'Marck Script', serif;
         color: #443a36;
         margin-left: 10px;
-        padding-bottom: 10px;
-        padding-top: 8px;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
 
     #logo a {
@@ -294,7 +302,7 @@ video {
 
     figcaption {
         color: #443a36;
-        line-height: 1.2em;
+        line-height: 1.1em;
         font-size: 1.2em;
         font-family: 'Marck Script', sans-serif;
         text-align: center;
@@ -308,7 +316,7 @@ video {
     }
 
     body {
-        padding: 1px;
+        padding: 0px;
         background-color: #b8bbba;
     }
 
@@ -324,8 +332,8 @@ video {
     p.one img {
         float: left;
         clear: right;
-        margin-left: 4px;
-        margin-bottom: 10px;
+        margin-left: 2px;
+        margin-bottom: 0px;
         margin-right: 5px;
         border: solid #A8956f 2px;
         padding: 2px;
@@ -334,8 +342,8 @@ video {
     p.two img {
         float: left;
         clear: right;
-        margin-left: 4px;
-        margin-bottom: 10px;
+        margin-left: 2px;
+        margin-bottom: 0px;
         margin-right: 5px;
         border: solid #A8956f 2px;
         padding: 2px;
@@ -351,14 +359,48 @@ video {
         border: solid #f5e9d2 2px;
         padding: 1px;
     }
+    .statement {
+        text-align: center;
+        font-family: 'Marck Script', cursive;
+        color: #b8bbba;
+        font-weight: italic;
+        line-height: 1em;
+        font-size: 1.3em;
+    }
+    .statement2 {
+        text-align: center;
+        font-family: 'Marck Script', cursive;
+        color: #443a36;
+        font-weight: bold;
+        line-height: 1em;
+        font-size: 1.5em;
+        padding-top: 2em;
+    }
 
     .question {
         text-align: center;
         font-family: 'Marck Script', cursive;
         color: #443a36;
         font-weight: bold;
-        line-height: 1.0em;
-        font-size: 1.2em;
+        line-height: 1em;
+        font-size: 1.3em;
+    }
+
+    .portfolio {
+        text-transform: capitalize;
+        font-family: 'Averia Libre', cursive;
+    }
+
+    .museum {
+        font-family: 'Mclaren', cursive;
+        text-align: center;
+        text-shadow: 2px 2px 1px #898e8c;
+        color: #443a36;
+        text-transform: uppercase;
+        padding-top: 20px;
+        font-weight: bold;
+        line-height: 2.4em;
+        font-size: 1.3em;
     }
 
     div {
@@ -398,7 +440,7 @@ video {
     .topnav a {
         color: #f5e9d2;
         display: block;
-        padding: 13px 15px;
+        padding: 12px 14px;
         text-decoration: none;
         font-size: 25px;
     }
@@ -451,10 +493,6 @@ This class makes the topnav look good on small screens (display the links vertic
             max-width: 100%;
         }
 
-        .mygrid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-        }
         .wrapper {
             width: 100%;
             margin: 0 auto;
@@ -462,7 +500,7 @@ This class makes the topnav look good on small screens (display the links vertic
 
         @media only screen and (max-width: 500px) {
             body {
-                background-color: #f5e9d2;
+                background-color: #443a36;
             }
         }
 
