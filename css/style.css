@@ -16,6 +16,17 @@ video {
     max-width: 100%;
 }
 
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: #443a36;
+    }
+}
+
 @supports (grid-area: auto) {
     @media (min-width: 900px) {
         article.grid {
@@ -46,15 +57,6 @@ video {
 
             grid-gap: 20px;
         }
-
-        main.article {
-            display: grid;
-            grid-template-columns: 2fr 1fr 2fr 1fr;
-            grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero hero hero" "title aside map map" "intro aside text text" "detail detail detail detail";
-
-            grid-gap: 20px;
-        }
     }
     /* end 1200px media query*/
     .heroimage {
@@ -71,7 +73,7 @@ video {
     }
 
     .aside {
-        grid-area: sidebar;
+        grid-area: aside;
     }
 
     .detail {
@@ -102,7 +104,7 @@ video {
     }
 
     .aside {
-        font-family: 'Marck Script', sans-serif;
+        font-family: 'Marck Script', cursive;
         margin: 1.5px;
         padding: 20px;
         line-height: 1.2em;
@@ -118,11 +120,10 @@ video {
         background-color: #b8bbba;
         padding-bottom: 30px;
         padding-top: 2px;
-
     }
 
     .footer {
-        font-family: 'Marck Script', sans-serif;
+        font-family: 'Marck Script', cursive;
         background-color: #443a36;
         color: #b8bbba;
         text-align: center;
@@ -146,9 +147,9 @@ video {
     }
 
     h3 {
+        font-family: 'Mclaren', cursive;
         color: #443a36;
         text-align: center;
-        font-family: 'Averia Libre', cursive;
         font-weight: bold;
         text-transform: uppercase;
         text-shadow: 2px 3px 1px #b8bbba;
@@ -156,7 +157,7 @@ video {
     }
 
     h2 {
-        font-family: 'Mclaren', cursive;
+        font-family: 'Averia Libre', cursive;
         text-align: center;
         text-shadow: 2px 2px 1px #898e8c;
         color: #443a36;
@@ -165,10 +166,10 @@ video {
     }
 
     h1 {
+        font-family: 'Averia Libre', cursive;
         text-transform: uppercase;
         color: #443a36;
         text-shadow: 3px 2px 1px #898e8c;
-        font-family: 'Averia Libre', cursive;
         margin-left: 4px;
         font-size: 1.7em;
     }
@@ -192,8 +193,9 @@ video {
         font-size: 1.2em;
         text-transform: capitalize;
     }
+
     .page {
-        font-family: 'Marck Script', sans-serif;
+        font-family: 'Marck Script', cursive;
         font-size: 1.0em;
         padding-bottom: 0px;
         text-align: right;
@@ -210,11 +212,11 @@ video {
     }
 
     p.four {
-        font-family: 'Averia Libre', cursive;
+        font-family: 'Mclaren', cursive;
         color: #443a36;
         font-style: italic;
         font-weight: bold;
-        line-height: 1.4em;
+        line-height: 1.3em;
         text-align: center;
     }
 
@@ -253,12 +255,12 @@ video {
     }
 
     p.two {
-        font-family: 'Mclaren', cursive, sans-serif;
+        font-family: 'Averia Libre', cursive;
         font-weight: bold;
         color: #443a36;
         line-height: 1.4em;
+        font-size: 1.1em;
     }
-
 
     p.one {
         font-family: 'Averia Libre', cursive;
@@ -268,11 +270,10 @@ video {
         font-size: 1.2em;
     }
 
-
     #logo {
+        font-family: 'Marck Script', cursive;
         text-shadow: 3px 3px 2px #898e8c;
         font-size: 2.45em;
-        font-family: 'Marck Script', serif;
         color: #443a36;
         margin-left: 10px;
         padding-bottom: 5px;
@@ -283,7 +284,6 @@ video {
         color: #443a36;
         text-decoration: none;
         text-shadow: -1px 0 #A8956f, 0 1px #f5e9d2, 1px 0 #898e8c, 0 -1px #443a36;
-
     }
 
     .heroimage {
@@ -305,10 +305,10 @@ video {
     }
 
     figcaption {
+        font-family: 'Marck Script', cursive;
         color: #443a36;
         line-height: 1.1em;
         font-size: 1.2em;
-        font-family: 'Marck Script', sans-serif;
         text-align: center;
         font-weight: bold;
     }
@@ -364,16 +364,16 @@ video {
         padding: 1px;
     }
     .statement {
-        text-align: center;
         font-family: 'Marck Script', cursive;
+        text-align: center;
         color: #b8bbba;
         font-weight: italic;
         line-height: 1em;
         font-size: 1.3em;
     }
     .statement2 {
-        text-align: center;
         font-family: 'Marck Script', cursive;
+        text-align: center;
         color: #443a36;
         font-weight: bold;
         line-height: 1em;
@@ -391,8 +391,8 @@ video {
     }
 
     .portfolio {
-        text-transform: capitalize;
         font-family: 'Averia Libre', cursive;
+        text-transform: capitalize;
     }
 
     .museum {
@@ -417,10 +417,9 @@ video {
 
     /* Add a black background color to the top navigation */
     .topnav {
+        font-family: 'Marck Script', cursive;
         overflow: hidden;
         background-color: #443a36;
-        font-family: 'Marck Script', cursive;
-
     }
 
     /* Remove default list styling: remove bullet points from the list and remove default margin */
@@ -495,17 +494,6 @@ This class makes the topnav look good on small screens (display the links vertic
             width: auto;
             height: auto;
             max-width: 100%;
-        }
-
-        .wrapper {
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        @media only screen and (max-width: 500px) {
-            body {
-                background-color: #443a36;
-            }
         }
 
         /*
