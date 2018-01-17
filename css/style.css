@@ -369,7 +369,7 @@ video {
         color: #b8bbba;
         font-weight: italic;
         line-height: 1em;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     .statement2 {
         font-family: 'Marck Script', cursive;
@@ -377,7 +377,7 @@ video {
         color: #443a36;
         font-weight: bold;
         line-height: 1em;
-        font-size: 1.5em;
+        font-size: 1.3em;
         padding-top: 2em;
     }
 
@@ -400,11 +400,11 @@ video {
         text-align: center;
         text-shadow: 2px 2px 1px #898e8c;
         color: #443a36;
-        text-transform: uppercase;
-        padding-top: 50px;
+        text-transform: capitalize;
+        padding-top: 0px;
         font-weight: bold;
-        line-height: 1.6em;
-        font-size: 1.4em;
+        line-height: 1.7em;
+        font-size: 1.3em;
     }
 
     div {
