@@ -27,6 +27,10 @@ video {
     }
 }
 
+/* end 500px media query*/
+
+/*write in other layout code for mobile version that doesn't need the grid*/
+
 @supports (grid-area: auto) {
     @media (min-width: 900px) {
         article.grid {
@@ -49,7 +53,7 @@ video {
     }
     /* end 900px media query*/
     @media (min-width: 1200px) {
-        article.main {
+        article {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             grid-template-rows: repeat(4, max-content);
@@ -81,9 +85,6 @@ video {
     }
     .text {
         grid-area: text;
-    }
-    .footer {
-        grid-area: footer;
     }
 
     /* end @supports */
@@ -140,7 +141,7 @@ video {
         font-family: 'Kite One', sans-serif;
         color: #443a36;
         text-shadow: 3px 5px 2px #c9c6ba;
-        margin-left: 10px;
+        margin-left: 4px;
         font-style: italic;
         font-weight: bold;
         font-size: 1.3em;
@@ -169,9 +170,9 @@ video {
         font-family: 'Averia Libre', cursive;
         text-transform: uppercase;
         color: #443a36;
-        text-shadow: 3px 2px 1px #898e8c;
-        margin-left: 4px;
-        font-size: 1.7em;
+        text-shadow: 2px 2px 1px #898e8c;
+        margin-left: 1px;
+        font-size: 1.6em;
     }
 
     .title {
@@ -205,7 +206,7 @@ video {
     p.five {
         font-family: 'Kite One', sans-serif;
         color: #443a36;
-        margin: 5px;
+        margin: 4px;
         font-weight: bolder;
         line-height: 1.7em;
         text-indent: 30px;
@@ -216,7 +217,7 @@ video {
         color: #443a36;
         font-style: italic;
         font-weight: bold;
-        line-height: 1.4em;
+        line-height: 1.3em;
         text-align: center;
     }
 
@@ -275,7 +276,7 @@ video {
         text-shadow: 3px 3px 2px #898e8c;
         font-size: 2.45em;
         color: #443a36;
-        margin-left: 10px;
+        margin-left: 5px;
         padding-bottom: 5px;
         padding-top: 5px;
     }
@@ -307,7 +308,7 @@ video {
     figcaption {
         font-family: 'Marck Script', cursive;
         color: #443a36;
-        line-height: 1.1em;
+        line-height: 1em;
         font-size: 1.2em;
         text-align: center;
         font-weight: bold;
@@ -336,7 +337,7 @@ video {
     p.one img {
         float: left;
         clear: right;
-        margin-left: 2px;
+        margin-left: 1px;
         margin-bottom: 0px;
         margin-right: 5px;
         border: solid #f5e9d2 2px;
@@ -346,7 +347,7 @@ video {
     p.two img {
         float: left;
         clear: right;
-        margin-left: 2px;
+        margin-left: 1px;
         margin-bottom: 0px;
         margin-right: 5px;
         border: solid #f5e9d2 2px;
@@ -377,7 +378,7 @@ video {
         color: #443a36;
         font-weight: bold;
         line-height: 1em;
-        font-size: 1.3em;
+        font-size: 1.4em;
         padding-top: 2em;
     }
 
