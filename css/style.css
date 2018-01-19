@@ -1,7 +1,7 @@
 /* Edit the CSS below to create your grid.
    ============================== */
 
-style.css
+css/style.css
 /*fonts*/
 
 @import url('https://fonts.googleapis.com/css?family=Averia+Libre|Kite+One|Marck+Script|McLaren');
@@ -20,8 +20,8 @@ video {
     article.main {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: repeat(5, max-content);
-        grid-template-areas: "hero hero hero" "title sidebar detail" "intro sidebar map" "text text text";
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "footer footer footer";
 
         grid-gap: 20px;
 
@@ -44,15 +44,7 @@ video {
     }
     .text {
         grid-area: text;
-    }
-    .more-articles {
-        border-top: 1px solid #ffffff;
-        padding: 15px;
-    }
-    .more-articles p {
-        border-bottom: 1px solid #807c72;
-        padding: 5px 0px 15px 0px;
-        font-size: 80%;
+
     }
     .sidebar {
         grid-area: content;
@@ -60,10 +52,6 @@ video {
     .footer {
         grid-area: footer;
     }
-    .footer li {
-        display: inline;
-    }
-
 
     /* end @supports
 
@@ -81,7 +69,8 @@ video {
         justify-content: center;
         align-items: center;
         background-color: #b8bbba;
-        border: 2px; solid #333;
+        border: 2px;
+        solid #333;
     }
 
     /*  height: 10em;  */
@@ -89,7 +78,7 @@ video {
 
 header {
     background-color: #b8bbba;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 article {
@@ -117,6 +106,11 @@ article {
     text-align: center;
     padding-top: 1px;
 }
+
+.footer li {
+    display: inline;
+}
+
 
 h4 {
     font-family: 'Kite One', sans-serif;
@@ -510,4 +504,3 @@ This class makes the topnav look good on small screens (display the links vertic
         position: absolute;
 
     }
-
