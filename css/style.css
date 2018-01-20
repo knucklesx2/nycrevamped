@@ -21,24 +21,9 @@ video {
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 500px) {
-    body {
-        background-color: #443a36;
-    }
-}
-
-/* end 500px media query*/
-
 /*write in other layout code for mobile version that doesn't need the grid*/
 
 @supports (grid-area: auto) {
-<<<<<<< HEAD
-    article.main {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "title sidebar map" "intro sidebar text" "footer footer footer";
-=======
     @media (min-width: 900px) {
         article.grid {
             display: grid;
@@ -48,7 +33,6 @@ video {
 
             grid-gap: 20px;
         }
->>>>>>> origin/master
 
         article {
             display: grid;
@@ -93,194 +77,11 @@ video {
     }
     .text {
         grid-area: text;
-<<<<<<< HEAD
-
     }
-    .sidebar {
-        grid-area: content;
-    }
-    .footer {
-        grid-area: footer;
-    }
-
-    /* end @supports
-
-=======
-    }
->>>>>>> origin/master
 
     /* end @supports */
     header {
         background-color: #b8bbba;
-<<<<<<< HEAD
-        border: 2px;
-        solid #333;
-    }
-
-    /*  height: 10em;  */
-}
-
-header {
-    background-color: #b8bbba;
-    margin-bottom: 0px;
-}
-
-article {
-    background-color: #c9c6ba;
-    color: #443a36;
-}
-
-.sidebar {
-    background-color: #443a36;
-    color: #b8bbba;
-    text-align: center;
-}
-
-.sidebar {
-    font-family: 'Marck Script', sans-serif;
-    margin: 1.5px;
-    padding: 8px;
-    line-height: 1.2em;
-    font-size: 1.3em;
-}
-
-.footer {
-    background-color: #443a36;
-    color: #b8bbba;
-    text-align: center;
-    padding-top: 1px;
-}
-
-.footer li {
-    display: inline;
-}
-
-
-h4 {
-    font-family: 'Kite One', sans-serif;
-    color: #443a36;
-    text-shadow: 3px 5px 2px #c9c6ba;
-    margin-left: 30px;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-h3 {
-    color: #443a36;
-    text-align: center;
-    font-family: 'Averia Libre', cursive;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: 'Mclaren', cursive;
-    text-align: center;
-    text-shadow: 3px 2px 2px #898e8c;
-    color: #443a36;
-    text-transform: uppercase;
-}
-
-h1 {
-    text-transform: uppercase;
-    color: #443a36;
-    text-shadow: 3px 2px 1px #898e8c;
-    font-family: 'Averia Libre', cursive;
-    margin-left: 5px;
-    font-size: 1.4;
-}
-
-.title {
-    font-style: italic;
-    font-size: 1.4em;
-    padding-bottom: 10px;
-}
-
-.subtitle1 {
-    font-style: italic;
-    font-size: 1.1em;
-    margin-bottom: 50px;
-}
-
-.subtitle2 {
-    font-style: italic;
-    font-size: 1.1em;
-    padding-bottom: 30px;
-}
-
-.subtitle3 {
-    font-style: italic;
-    font-size: 1.4em;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-transform: capitalize;
-
-}
-
-.subtitle4 {
-    font-style: italic;
-    font-size: 1.1em;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    text-transform: capitalize;
-}
-
-.address {
-    font-size: .8em;
-    text-transform: capitalize;
-}
-
-p.five {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-p6 {
-    font-family: 'Marck Script', cursive;
-    font-size: 1.1em;
-}
-
-p5 {
-    font-family: 'Kite One', sans-serif;
-    color: #443a36;
-    margin: 50px;
-    font-weight: bold;
-    line-height: 1.7em;
-}
-
-p4 {
-    font-family: 'Averia Libre', cursive;
-    color: #443a36;
-    font-style: italic;
-    font-weight: bold;
-    line-height: 1.4em;
-    text-align: center;
-}
-
-p3 {
-    font-family: 'Marck Script', cursive;
-    color: #b8bbba;
-    font-size: 1.2em;
-    line-height: 1.2em;
-}
-
-p2 {
-    font-family: 'Mclaren', cursive, sans-serif;
-    font-weight: bold;
-    color: #443a36;
-    line-height: 1.4em;
-}
-
-
-p1 {
-    font-family: 'Averia Libre', cursive;
-    font-weight: bold;
-    color: #443a36;
-    line-height: 1.3em;
-    font-size: 1.2em;
-}
-=======
         margin-bottom: 0px;
     }
 
@@ -288,7 +89,6 @@ p1 {
         background-color: #c9c6ba;
         color: #443a36;
     }
->>>>>>> origin/master
 
     .aside {
         background-color: #443a36;
@@ -311,7 +111,7 @@ p1 {
 
     .detail {
         background-color: #b8bbba;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         padding-top: 2px;
     }
 
@@ -320,7 +120,7 @@ p1 {
         background-color: #443a36;
         color: #b8bbba;
         text-align: center;
-        padding-top: 10px;
+        padding-top: 5px;
         font-size: 1.0em;
         line-height: 1.1em;
     }
@@ -333,7 +133,7 @@ p1 {
         font-family: 'Kite One', sans-serif;
         color: #443a36;
         text-shadow: 3px 5px 2px #c9c6ba;
-        margin-left: 4px;
+        margin-left: 2px;
         font-style: italic;
         font-weight: bold;
         font-size: 1.3em;
@@ -367,23 +167,40 @@ p1 {
         font-size: 1.6em;
     }
 
-    .title {
-        font-style: none;
-        font-size: 1em;
+    #logo {
+        font-family: 'Marck Script', cursive;
+        text-shadow: 3px 3px 2px #898e8c;
+        font-size: 2.40em;
+        color: #443a36;
+        margin-left: 5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    #logo a {
+        color: #443a36;
+        text-decoration: none;
+        text-shadow: -1px 0 #A8956f, 0 1px #f5e9d2, 1px 0 #898e8c, 0 -1px #443a36;
+    }
+
+    .heroimage {
         padding-top: 0px;
-        margin-right: 8em;
+        text-align: center;
+    }
+
+    .title {
+        font-style: italic;
+        font-size: 1.4em;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin-right: 5em;
     }
 
     .subtitle {
         font-style: italic;
-        font-size: 1.1em;
+        font-size: 1.2em;
         padding-top: 0px;
         padding-bottom: 10px;
-        text-transform: capitalize;
-    }
-
-    .address {
-        font-size: 1.1em;
         text-transform: capitalize;
     }
 
@@ -395,12 +212,18 @@ p1 {
         margin-right: 0px;
     }
 
+    .portfolio {
+        font-family: 'Averia Libre', cursive;
+        text-transform: capitalize;
+    }
+
     p.five {
         font-family: 'Kite One', sans-serif;
         color: #443a36;
-        margin: 4px;
         font-weight: bolder;
-        line-height: 1.7em;
+        line-height: 1.5em;
+        padding-left: 2px;
+        padding-right: 2px;
         text-indent: 30px;
     }
 
@@ -438,13 +261,20 @@ p1 {
         content: counter(li);
         color: #f5e9d2;
         display: inline-block;
-        width: 1.4em;
+        width: 1.3em;
         margin-left: 0em;
     }
 
     p.three,
     li {
         counter-increment: li
+    }
+
+    p.three {
+        font-family: 'Marck Script', cursive;
+        color: #b8bbba;
+        font-size: 1.2em;
+        line-height: 1.2em;
     }
 
     p.two {
@@ -455,6 +285,16 @@ p1 {
         font-size: 1.1em;
     }
 
+    p.two img {
+        float: left;
+        clear: right;
+        margin-left: 1px;
+        margin-bottom: 0px;
+        margin-right: 4px;
+        border: solid #f5e9d2 2px;
+        padding: 1px;
+    }
+
     p.one {
         font-family: 'Averia Libre', cursive;
         font-weight: bold;
@@ -463,25 +303,14 @@ p1 {
         font-size: 1.2em;
     }
 
-    #logo {
-        font-family: 'Marck Script', cursive;
-        text-shadow: 3px 3px 2px #898e8c;
-        font-size: 2.45em;
-        color: #443a36;
-        margin-left: 5px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-    }
-
-    #logo a {
-        color: #443a36;
-        text-decoration: none;
-        text-shadow: -1px 0 #A8956f, 0 1px #f5e9d2, 1px 0 #898e8c, 0 -1px #443a36;
-    }
-
-    .heroimage {
-        padding-top: 0px;
-        text-align: center;
+    p.one img {
+        float: left;
+        clear: right;
+        margin-left: 1px;
+        margin-bottom: 0px;
+        margin-right: 4px;
+        border: solid #f5e9d2 2px;
+        padding: 1px;
     }
 
     span.highlight {
@@ -506,6 +335,62 @@ p1 {
         font-weight: bold;
     }
 
+    figcaption img {
+        float: none;
+        clear: none;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        border: solid #f5e9d2 2px;
+        padding: 1px;
+    }
+
+    .statement {
+        font-family: 'Marck Script', cursive;
+        text-align: center;
+        color: #b8bbba;
+        font-weight: italic;
+        line-height: 1em;
+        font-size: 1.2em;
+    }
+
+    .statement2 {
+        font-family: 'Marck Script', cursive;
+        text-align: center;
+        color: #443a36;
+        font-weight: bold;
+        line-height: 1em;
+        font-size: 1.4em;
+        padding-top: 2em;
+    }
+
+    .question {
+        font-family: 'Marck Script', cursive;
+        text-align: center;
+        color: #443a36;
+        font-weight: bold;
+        line-height: 1em;
+        font-size: 1.3em;
+    }
+
+    .address {
+        font-size: 1.2em;
+        text-transform: capitalize;
+    }
+
+    .museum {
+        font-family: 'Mclaren', cursive;
+        text-align: center;
+        text-shadow: 2px 2px 1px #898e8c;
+        color: #443a36;
+        text-transform: capitalize;
+        padding-top: 25px;
+        font-weight: bold;
+        line-height: 1.7em;
+        font-size: 1.3em;
+    }
+
     /* mouse over link*/
     a:hover,
     a:active {
@@ -526,79 +411,6 @@ p1 {
         text-decoration: none;
     }
 
-    p.one img {
-        float: left;
-        clear: right;
-        margin-left: 1px;
-        margin-bottom: 0px;
-        margin-right: 5px;
-        border: solid #f5e9d2 2px;
-        padding: 1px;
-    }
-
-    p.two img {
-        float: left;
-        clear: right;
-        margin-left: 1px;
-        margin-bottom: 0px;
-        margin-right: 5px;
-        border: solid #f5e9d2 2px;
-        padding: 1px;
-    }
-
-    figcaption img {
-        float: none;
-        clear: none;
-        margin-left: 0px;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        margin-right: 0px;
-        border: solid #f5e9d2 2px;
-        padding: 1px;
-    }
-    .statement {
-        font-family: 'Marck Script', cursive;
-        text-align: center;
-        color: #b8bbba;
-        font-weight: italic;
-        line-height: 1em;
-        font-size: 1.2em;
-    }
-    .statement2 {
-        font-family: 'Marck Script', cursive;
-        text-align: center;
-        color: #443a36;
-        font-weight: bold;
-        line-height: 1em;
-        font-size: 1.4em;
-        padding-top: 2em;
-    }
-
-    .question {
-        text-align: center;
-        font-family: 'Marck Script', cursive;
-        color: #443a36;
-        font-weight: bold;
-        line-height: 1em;
-        font-size: 1.3em;
-    }
-
-    .portfolio {
-        font-family: 'Averia Libre', cursive;
-        text-transform: capitalize;
-    }
-
-    .museum {
-        font-family: 'Mclaren', cursive;
-        text-align: center;
-        text-shadow: 2px 2px 1px #898e8c;
-        color: #443a36;
-        text-transform: capitalize;
-        padding-top: 0px;
-        font-weight: bold;
-        line-height: 1.7em;
-        font-size: 1.3em;
-    }
 
     div {
         clear: both;
@@ -689,9 +501,13 @@ This class makes the topnav look good on small screens (display the links vertic
             max-width: 100%;
         }
 
-<<<<<<< HEAD
-    }
-=======
+        @media only screen and (max-width: 500px) {
+            body {
+                background-color: #443a36;
+            }
+
+        }
+
         /*
   =====================================
   CSS for <iframe> embedded Google Map
@@ -715,4 +531,3 @@ This class makes the topnav look good on small screens (display the links vertic
             width: 100%;
             height: 100%;
         }
->>>>>>> origin/master
