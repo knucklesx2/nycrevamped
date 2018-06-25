@@ -4,8 +4,7 @@
 css/style.css
 /*fonts*/
 
-@import url('https://fonts.googleapis.com/css?family=Averia+Libre%7cKite+One%7cMarck+Script%7cMcLaren');
-
+@import url('https://fonts.googleapis.com/css?family=Kite+One%7cMarck+Script%7cMcLaren');
 
 /* Basic Responsive Images and Video */
 
@@ -23,507 +22,553 @@ video {
 
 /*write in other layout code for mobile version that doesn't need the grid*/
 
-@supports (grid-area: auto)
- @media (min-width: 600px) {
-        article.grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
+@supports (grid-area: auto) @media (min-width: 600px) {
+    article.grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero " "title aside map" "intro aside text" "detail detail detail";
 
-            grid-gap: 20px;
-        }
-    }
- /* end 600px media query*/
-    @media (min-width: 900px) {
-        article.grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
-
-            grid-gap: 20px;
-        }
-
-        article {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero" "title map" "intro aside" "text text" "detail detail";
-
-            grid-gap: 20px;
-        }
-    }
-    /* end 900px media query*/
-    @media (min-width: 1200px) {
-        article {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: repeat(4, max-content);
-            grid-template-areas: "hero hero hero" "title aside map" "intro aside map" "detail detail detail";
-
-            grid-gap: 20px;
-        }
-    }
-    /* end 1200px media query*/
-
-    .heroimage {
-        grid-area: hero;
-    }
-    .title {
-        grid-area: title;
-    }
-    .intro {
-        grid-area: intro;
-    }
-    .map {
-        grid-area: map;
-    }
-
-    .aside {
-        grid-area: aside;
-    }
-
-    .detail {
-        grid-area: detail;
-    }
-    .text {
-        grid-area: text;
-    }
-
-    /* end @supports */
-    header {
-        background-color: #b8bbba;
-        margin-bottom: 0px;
+        grid-gap: 20px;
     }
 
     article {
-        background-color: #c9c6ba;
-        color: #443a36;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
+
+        grid-gap: 20px;
+    }
+}
+
+/* end 600px media query*/
+
+@media (min-width: 900px) {
+    article.grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
+
+        grid-gap: 20px;
     }
 
-    .aside {
-        background-color: #443a36;
-        color: #b8bbba;
-        text-align: center;
+    article {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero" "title map" "intro aside" "detail detail";
+
+        grid-gap: 20px;
     }
+}
 
-    .aside {
-        font-family: 'Marck Script', cursive;
-        margin: 1.5px;
-        padding: 20px;
-        line-height: 1.2em;
-        font-size: 1.3em;
-        margin-top: 20px;
+/* end 900px media query*/
+
+@media (min-width: 1200px) {
+    article {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero" "title aside map" "intro aside map" "detail detail detail";
+
+        grid-gap: 20px;
     }
+}
 
-    .map {
-        margin-top: 20px;
-    }
+/* end 1200px media query*/
 
-    .detail {
-        background-color: #b8bbba;
-        padding-bottom: 10px;
-        padding-top: 2px;
-    }
+.heroimage {
+    grid-area: hero;
+}
 
-    .footer {
-        font-family: 'Marck Script', cursive;
-        background-color: #443a36;
-        color: #b8bbba;
-        text-align: center;
-        padding-top: 5px;
-        font-size: 1.0em;
-        line-height: 1.1em;
-    }
+.title {
+    grid-area: title;
+}
 
-    .footer li {
-        display: inline;
-    }
+.intro {
+    grid-area: intro;
+}
 
-    h4 {
-        font-family: 'Kite One', sans-serif;
-        color: #443a36;
-        text-shadow: 3px 5px 2px #c9c6ba;
-        margin-left: 2px;
-        font-style: italic;
-        font-weight: bold;
-        font-size: 1.3em;
-    }
+.map {
+    grid-area: map;
+}
 
-    h3 {
-        font-family: 'Mclaren', cursive;
-        color: #443a36;
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-shadow: 2px 3px 1px #b8bbba;
-        padding-top: 10px; font-size: 1.4em;
-    }
+.aside {
+    grid-area: aside;
+}
 
-    h2 {
-        font-family: 'Averia Libre', sans-serif;
-        text-align: center;
-        text-shadow: 1px 2px 0px #898e8c;
-        color: #443a36;
-        text-transform: uppercase;
-        padding-top: 10px; font-size: 1.6em;
-    }
+.detail {
+    grid-area: detail;
+}
 
-    h1 {
-        font-family: 'Averia Libre', sans-serif;
-        text-transform: uppercase;
-        color: #443a36;
-        text-shadow: 2px 2px 1px #898e8c;
-        margin-left: 1px;
-        font-size: 1.8em;
-    }
+.text {
+    grid-area: text;
+}
 
-    #logo {
-        font-family: 'Marck Script', cursive;
-        text-shadow: 3px 3px 2px #898e8c;
-        font-size: 2.40em;
-        color: #443a36;
-        margin-left: 5px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-    }
+/* end @supports */
 
-    #logo a {
-        color: #443a36;
-        text-decoration: none;
-        text-shadow: -1px 0 #A8956f, 0 1px #f5e9d2, 1px 0 #898e8c, 0 -1px #443a36;
-    }
+header {
+    background-color: #b8bbba;
+    margin-bottom: 0px;
+}
 
-    .heroimage {
-        padding-top: 0px;
-        text-align: center;
-    }
+article {
+    background-color: #c9c6ba;
+    color: #443a36;
+}
 
-    .title {
-        font-style: italic;
-        font-size: 1.4em;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        margin-right: 5em;
-    }
+.aside {
+    background-color: #443a36;
+    color: #b8bbba;
+    text-align: center;
+    font-family: 'Marck Script', cursive;
+    padding: 10px;
+    line-height: 1.5em;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
 
-    .subtitle {
-        font-style: italic;
-        font-size: 1.2em;
-        padding-top: 0px;
-        padding-bottom: 10px;
-        text-transform: capitalize;
-    }
+ol {
+    font-family: 'Marck Script', cursive;
+    color: #b8bbba;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    background: #443a36;
+    padding: 10px;
+    list-style: none;
+    counter-reset: li
+}
 
-    .page {
-        font-family: 'Marck Script', cursive;
-        font-size: 1.0em;
-        padding-bottom: 0px;
-        text-align: right;
-        margin-right: 0px;
-    }
+ol li::before {
+    content: counter(li);
+    color: #f5e9d2;
+    display: inline-block;
+    width: 1.3em;
+    margin-left: 0em;
+}
 
-    .portfolio {
-        font-family: 'Averia Libre', sans-serif;
-        text-transform: capitalize;
-    }
-
-    p.five {
-        font-family: 'Kite One', sans-serif;
-        color: #443a36;
-        font-weight: bolder;
-        line-height: 1.5em;
-        padding-left: 2px;
-        padding-right: 2px;
-        text-indent: 30px;
-    }
-
-    p.four {
-        font-family: 'Mclaren', cursive;
-        color: #443a36;
-        font-style: italic;
-        font-weight: bold;
-        line-height: 1.3em;
-        text-align: center;
-    }
-
-    p.three,
-    ol {
-        font-family: 'Marck Script', cursive;
-        color: #b8bbba;
-        font-size: 1.2em;
-        line-height: 1.2em;
-        background: #443a36;
-        padding: 10px;
-        list-style: none;
-        counter-reset: li
-    }
-
-    ol li::before {
-        content: counter(li);
-        color: #f5e9d2;
-        display: inline-block;
-        width: 1.3em;
-        margin-left: 0em;
-    }
-
-    li {
-        counter-increment: li
-    }
+li {
+    counter-increment: li
+}
 
 
-    p.two {
-        font-family: 'Averia Libre', sans-serif;
-        font-weight: bold;
-        color: #443a36;
-        line-height: 1.3em;
-        font-size: 1.1em;
-    }
+.map {
+    margin-top: 10px;
+}
 
-    p.two img {
-        float: left;
-        clear: right;
-        margin-left: 1px;
-        margin-bottom: 0px;
-        margin-right: 4px;
-        border: solid #f5e9d2 2px;
-        padding: 1px;
-    }
+.detail {
+    background-color: #b8bbba;
+    padding-bottom: 10px;
+    padding-top: 2px;
+    font-size: 1.1em;
 
-    p.one {
-        font-family: 'Averia Libre', sans-serif;
-        font-weight: bold;
-        color: #443a36;
-        line-height: 1.2em;
-        font-size: 1.2em;
-    }
+}
 
-    p.one img {
-        float: left;
-        clear: right;
-        margin-left: 1px;
-        margin-bottom: 0px;
-        margin-right: 4px;
-        border: solid #f5e9d2 2px;
-        padding: 1px;
-    }
+.footer {
+    font-family: 'Marck Script', cursive;
+    background-color: #443a36;
+    color: #b8bbba;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.1em;
+    line-height: 1.1;
+}
 
-    span.highlight {
-        background-color: #b8bbba;
-    }
+.footer li {
+    display: inline;
+}
 
-    img,
-    iframe {
-        border-radius: 20px;
-    }
+h4 {
+    font-family: 'Kite One', sans-serif;
+    color: #443a36;
+    text-shadow: 3px 4px 2px #c9c6ba;
+    margin: 1.5em 0 0.5em 0;
+    font-weight: 800;
+    font-size: 1.50em;
+    line-height: 1;
 
-    iframe {
-        border: solid #f5e9d2 2px;
-    }
+}
 
-    figcaption {
-        font-family: 'Marck Script', cursive;
-        color: #443a36;
-        line-height: 1em;
-        font-size: 1.2em;
-        text-align: center;
-        font-weight: bold;
-    }
+h3 {
+    font-family: 'Kite One', sans-serif;
+    color: #443a36;
+    text-align: center;
+    text-shadow: 2px 3px 4px #898e8c;
+    margin: 1.25em 0 0.25em 0;
+    font-size: 2.25em;
+    line-height: 1;
 
-    figcaption img {
-        float: none;
-        clear: none;
-        margin-left: 0px;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        margin-right: 0px;
-        border: solid #f5e9d2 2px;
-        padding: 1px;
-    }
+}
 
-    .statement {
-        font-family: 'Marck Script', cursive;
-        text-align: center;
-        color: #b8bbba;
-        font-weight: italic;
-        line-height: 1em;
-        font-size: 1.2em;
-    }
+h2 {
+    font-family: 'Kite One', sans-serif;
+    text-align: center;
+    text-shadow: 1px 3px 3px #898e8c;
+    color: #443a36;
+    margin: 1.5em 0 0.5em 0;
+    padding-top: 5px;
+    font-size: 2.25em;
+    line-height: 1.2;
+}
 
-    .statement2 {
-        font-family: 'Marck Script', cursive;
-        text-align: center;
-        color: #443a36;
-        font-weight: bold;
-        line-height: 1em;
-        font-size: 1.4em;
-        padding-top: 2em;
-    }
+h1 {
+    font-family: 'Kite One', sans-serif;
+    color: #443a36;
+    text-shadow: 2px 2px 1px #898e8c;
+    margin: 0 0 0.5em 0;
+    font-size: 3.25em;
+    line-height: 1;
 
-    .question {
-        font-family: 'Marck Script', cursive;
-        text-align: center;
-        color: #443a36;
-        font-weight: bold;
-        line-height: 1em;
-        font-size: 1.3em;
-    }
+}
 
-    .address {
-        font-size: 1.2em;
-        text-transform: capitalize;
-    }
+h4 {
+    text-transform: uppercase;
+}
 
-    .museum {
-        font-family: 'Mclaren', cursive;
-        text-align: center;
-        text-shadow: 2px 2px 1px #898e8c;
-        color: #443a36;
-        text-transform: capitalize;
-        padding-top: 25px;
-        font-weight: bold;
-        line-height: 1.7em;
-        font-size: 1.3em;
-    }
-
-    /* mouse over link*/
-    a:hover,
-    a:active {
-        background-color: #A8956f;
-    }
-
-    body {
-        padding: 0px;
-        background-color: #b8bbba;
-    }
-
-    a:active {
-        color: #a3aeba;
-    }
-
-    a {
-        color: #f5e9d2;
-        text-decoration: none;
-    }
+h3,
+h2,
+h1 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'Kite One', sans-serif;
+}
 
 
-    div {
-        clear: both;
-    }
+p.four {
+    font-family: 'Kite One', sans-serif;
+    color: #443a36;
+    font-weight: 800;
+    line-height: 1.4em;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-indent: 30px;
+    font-size: 1.1em;
+}
 
-    .clearfix {
-        overflow: auto;
-    }
+p.three {
+    font-family: 'Kite One', sans-serif;
+    color: #443a36;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    text-align: center;
+}
 
-    /* Add a black background color to the top navigation */
-    .topnav {
-        font-family: 'Marck Script', cursive;
-        overflow: hidden;
-        background-color: #443a36;
-    }
+p.one,
+p.two {
+    font-family: 'Kite One', sans-serif;
+    font-weight: 800;
+    color: #443a36;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
 
-    /* Remove default list styling: remove bullet points from the list and remove default margin */
-    .topnav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
+p.two img {
+    float: left;
+    clear: right;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+    border: solid #f5e9d2 2px;
+    padding: 1px;
+}
 
-    .topnav ul li {
-        margin: 0;
-        padding: 0;
-    }
 
-    /* Style the links inside the navigation bar */
-    .topnav ul li {
-        float: left;
-        text-align: left;
-    }
+p.one img {
+    float: left;
+    clear: right;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+    border: solid #f5e9d2 2px;
+    padding: 1px;
+}
 
-    .topnav a {
-        color: #f5e9d2;
-        display: block;
-        padding: 12px 14px;
-        text-decoration: none;
-        font-size: 25px;
-    }
+#logo {
+    font-family: 'Marck Script', cursive;
+    font-size: 4em;
+    color: #443a36;
+}
 
-    /* Change the color of links on hover */
-    .topnav a:hover {
-        background-color: #b8bbba;
-        color: #443a36;
-    }
+#logo a {
+    color: #443a36;
+    text-decoration: none;
+    text-shadow: -1px 0 #A8956f, 0 2px #f5e9d2, 1px 0 #708090, 0 -1px #443a36;
 
-    /* Hide the link that should open and close the topnav on small screens */
-    .topnav .icon {
+}
+
+.heroimage {
+    padding-top: 0px;
+    text-align: center;
+}
+
+.title {
+    font-style: italic;
+    font-size: 1.3em;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    margin-right: 10em;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.page {
+    font-family: 'Mclaren', cursive;
+    font-size: 1em;
+    padding-bottom: 1px;
+    text-align: right;
+    margin-right: 1.5px;
+    font-style: italic;
+}
+
+.portfolio {
+    font-family: 'Mclaren', cursive;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+span.highlight {
+    background-color: #b8bbba;
+}
+
+img,
+iframe {
+    border-radius: 10px;
+}
+
+iframe {
+    border: solid #f5e9d2 2px;
+}
+
+figcaption {
+    font-family: 'Marck Script', cursive;
+    color: #443a36;
+    line-height: 1.1em;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 700;
+}
+
+figcaption img {
+    float: none;
+    clear: none;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    border: solid #f5e9d2 2px;
+    padding: 1px;
+}
+
+.statement {
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    color: #b8bbba;
+    font-weight: italic;
+    line-height: 1em;
+    font-size: 1.5em;
+}
+
+.statement2 {
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    color: #443a36;
+    font-weight: 800;
+    line-height: 1em;
+    font-size: 1.5em;
+    padding-top: .5em;
+}
+
+.question {
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    color: #443a36;
+    font-weight: 700;
+    line-height: 1em;
+    font-size: 1.3em;
+}
+
+.address {
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.museum {
+    font-family: 'Mclaren', cursive;
+    text-align: center;
+    text-shadow: 2px 2px 1px #898e8c;
+    color: #443a36;
+    text-transform: capitalize;
+    padding-top: 10px;
+    font-weight: 700;
+    line-height: 1.9em;
+    font-size: 1.7em;
+}
+
+/* mouse over link*/
+
+a:hover,
+a:active {
+    background-color: #A8956f;
+}
+
+/* The html and body selectors below set the base font for the entire page */
+
+html {
+    font-size: 1em;
+}
+
+body {
+    font-family: 'Kite One', sans-serif;
+    background-color: #b8bbba;
+    padding: 0px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #443a36;
+}
+
+a:active {
+    color: #a3aeba;
+}
+
+a {
+    color: #f5e9d2;
+    text-decoration: none;
+}
+
+
+div {
+    clear: both;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+    font-family: 'Marck Script', cursive;
+    overflow: hidden;
+    background-color: #443a36;
+}
+
+/* Remove default list styling: remove bullet points from the list and remove default margin */
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav ul li {
+    float: left;
+    text-align: left;
+}
+
+.topnav a {
+    color: #f5e9d2;
+    display: block;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #b8bbba;
+    color: #443a36;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home").
+Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+    .topnav li:not(:first-child) {
         display: none;
     }
 
-    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home").
-Show the link that contains should open and close the topnav (.icon) */
-    @media screen and (max-width: 600px) {
-        .topnav li:not(:first-child) {
-            display: none;
-        }
+    .topnav li.icon {
+        float: right;
+        display: block;
+    }
+}
 
-        .topnav li.icon {
-            float: right;
-            display: block;
-        }
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
     }
 
-    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
-This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-    @media screen and (max-width: 600px) {
-        .topnav.responsive {
-            position: relative;
-        }
-        .topnav.responsive li.icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-        .topnav.responsive li {
-            float: none;
-            display: block;
-            text-align: left;
+    img,
+    video {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: #443a36;
         }
 
-        img,
-        video {
-            width: auto;
-            height: auto;
-            max-width: 100%;
-        }
+    }
 
-        @media only screen and (max-width: 800px) {
-            body {
-                background-color: #443a36;
-            }
-
-        }
-
-        /*
+    /*
   =====================================
   CSS for <iframe> embedded Google Map
   =====================================
 */
-        .mapWrapper {
-            position: relative;
-            /*
+    .mapWrapper {
+        position: relative;
+        /*
     Do math with the height of your iframe divided by the width, then converted to percent
     In this example the height is 400 and the width is 600
     400 / 600 = .66666667
     which is 66.6666667% */
-            padding-bottom: 80.85106382978723%;
-            height: 0;
-        }
+        padding-bottom: 80.85106382978723%;
+        height: 0;
+    }
 
-        .mapWrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+    .mapWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
