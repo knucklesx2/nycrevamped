@@ -22,21 +22,21 @@ video {
 
 /*write in other layout code for mobile version that doesn't need the grid*/
 
-@supports (grid-area: auto) @media (min-width: 600px) {
+@supports (grid-area: auto) @media (max-width: 600px) {
     article.grid {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero " "title aside map" "intro aside text" "detail detail detail";
+        grid-template-areas: "hero hero hero " "maintitle aside map" "intro aside text" "detail detail detail";
 
         grid-gap: 20px;
     }
 
     article {
         display: grid;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
+        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside text" "detail detail detail";
 
         grid-gap: 20px;
     }
@@ -49,7 +49,7 @@ video {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "title aside map" "intro aside text" "detail detail detail";
+        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside text" "detail detail detail";
 
         grid-gap: 20px;
     }
@@ -58,7 +58,7 @@ video {
         display: grid;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero" "title map" "intro aside" "detail detail";
+        grid-template-areas: "hero hero" "maintitle map" "intro aside" "detail detail";
 
         grid-gap: 20px;
     }
@@ -71,7 +71,7 @@ video {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "title aside map" "intro aside map" "detail detail detail";
+        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside text" "detail detail detail";
 
         grid-gap: 20px;
     }
@@ -83,8 +83,8 @@ video {
     grid-area: hero;
 }
 
-.title {
-    grid-area: title;
+.maintitle {
+    grid-area: maintitle;
 }
 
 .intro {
@@ -208,9 +208,9 @@ h2 {
     text-shadow: 1px 3px 3px #898e8c;
     color: #443a36;
     margin: 1.5em 0 0.5em 0;
-    padding-top: 5px;
+    padding-top: 10px;
     font-size: 2.25em;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 h1 {
@@ -219,12 +219,8 @@ h1 {
     text-shadow: 2px 2px 1px #898e8c;
     margin: 0 0 0.5em 0;
     font-size: 3.25em;
-    line-height: 1;
+    line-height: 1.1;
 
-}
-
-h4 {
-    text-transform: uppercase;
 }
 
 h3,
@@ -257,8 +253,8 @@ p.three {
     text-align: center;
 }
 
-p.one,
-p.two {
+p.two,
+p.one {
     font-family: 'Kite One', sans-serif;
     font-weight: 800;
     color: #443a36;
@@ -287,6 +283,7 @@ p.one img {
     padding: 1px;
 }
 
+
 #logo {
     font-family: 'Marck Script', cursive;
     font-size: 4em;
@@ -305,7 +302,9 @@ p.one img {
     text-align: center;
 }
 
-.title {
+.image-fordham,.homeimage { padding-top: 25px;}
+
+.cammy {
     font-style: italic;
     font-size: 1.3em;
     padding-bottom: 0px;
@@ -313,11 +312,10 @@ p.one img {
     margin-right: 10em;
 }
 
-.subtitle {
+.hometitle {
     font-style: italic;
-    font-size: 1.1em;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-transform: capitalize;
 }
 
@@ -393,7 +391,7 @@ figcaption img {
     text-align: center;
     color: #443a36;
     font-weight: 700;
-    line-height: 1em;
+    line-height: 1.1em;
     font-size: 1.3em;
 }
 
@@ -433,7 +431,7 @@ body {
     padding: 0px;
     font-weight: 500;
     line-height: 1.5;
-    color: #443a36;
+    color: #333;
 }
 
 a:active {
