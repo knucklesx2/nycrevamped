@@ -22,7 +22,7 @@ video {
 
 /*write in other layout code for mobile version that doesn't need the grid*/
 
-@supports (grid-area: auto) @media (max-width: 600px) {
+@supports (grid-area: auto) @media (min-width: 600px) (max-width: 899px) {
     article.grid {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
@@ -30,6 +30,7 @@ video {
         grid-template-areas: "hero hero hero " "maintitle aside map" "intro aside text" "detail detail detail";
 
         grid-gap: 20px;
+
     }
 
     article {
@@ -53,7 +54,6 @@ video {
 
         grid-gap: 20px;
     }
-
     article {
         display: grid;
         grid-template-columns: 2fr 2fr;
@@ -126,14 +126,14 @@ article {
     font-family: 'Marck Script', cursive;
     padding: 10px;
     line-height: 1.5em;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-top: 10px;
 }
 
 ol {
     font-family: 'Marck Script', cursive;
     color: #b8bbba;
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.5em;
     background: #443a36;
     padding: 10px;
@@ -265,7 +265,7 @@ p.one {
 p.two img {
     float: left;
     clear: right;
-    margin-left: 1px;
+    margin-left: 0.5px;
     margin-bottom: 10px;
     margin-right: 4px;
     border: solid #f5e9d2 2px;
@@ -276,7 +276,7 @@ p.two img {
 p.one img {
     float: left;
     clear: right;
-    margin-left: 1px;
+    margin-left: 0.5px;
     margin-bottom: 10px;
     margin-right: 4px;
     border: solid #f5e9d2 2px;
@@ -302,7 +302,10 @@ p.one img {
     text-align: center;
 }
 
-.image-fordham,.homeimage { padding-top: 25px;}
+.image-fordham,
+.homeimage {
+    padding-top: 25px;
+}
 
 .cammy {
     font-style: italic;
@@ -392,7 +395,7 @@ figcaption img {
     color: #443a36;
     font-weight: 700;
     line-height: 1.1em;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .address {
