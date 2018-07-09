@@ -22,22 +22,21 @@ video {
 
 /*write in other layout code for mobile version that doesn't need the grid*/
 
-@supports (grid-area: auto) @media (min-width: 600px) (max-width: 899px) {
+@supports (grid-area: auto)
+    @media (min-width: 600px) and (max-width: 899px){
     article.grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero " "maintitle aside map" "intro aside text" "detail detail detail";
-
-        grid-gap: 20px;
-
-    }
-
-    article {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside text" "detail detail detail";
+        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside texts" "detail detail detail";
+
+        grid-gap: 20px;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero" "maintitle map" "intro aside" "detail detail";
 
         grid-gap: 20px;
     }
@@ -50,7 +49,7 @@ video {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside text" "detail detail detail";
+        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside texts" "detail detail detail";
 
         grid-gap: 20px;
     }
@@ -71,7 +70,7 @@ video {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside text" "detail detail detail";
+        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside texts" "detail detail detail";
 
         grid-gap: 20px;
     }
@@ -88,7 +87,7 @@ video {
 }
 
 .intro {
-    grid-area: intro;
+    grid-area: introduction;
 }
 
 .map {
@@ -103,8 +102,8 @@ video {
     grid-area: detail;
 }
 
-.text {
-    grid-area: text;
+.texts {
+    grid-area: texts;
 }
 
 /* end @supports */
@@ -153,7 +152,6 @@ li {
     counter-increment: li
 }
 
-
 .map {
     margin-top: 10px;
 }
@@ -173,7 +171,7 @@ li {
     text-align: center;
     padding-top: 10px;
     font-size: 1.1em;
-    line-height: 1.1;
+    line-height: 1.1em;
 }
 
 .footer li {
@@ -187,7 +185,7 @@ h4 {
     margin: 1.5em 0 0.5em 0;
     font-weight: 800;
     font-size: 1.50em;
-    line-height: 1;
+    line-height: 1em;
 
 }
 
@@ -196,9 +194,9 @@ h3 {
     color: #443a36;
     text-align: center;
     text-shadow: 2px 3px 4px #898e8c;
-    margin: 1.25em 0 0.25em 0;
+    margin: 1em 0 0.25em 0;
     font-size: 2.25em;
-    line-height: 1;
+    line-height: 1.1em;
 
 }
 
@@ -208,18 +206,18 @@ h2 {
     text-shadow: 1px 3px 3px #898e8c;
     color: #443a36;
     margin: 1.5em 0 0.5em 0;
-    padding-top: 10px;
+    padding-top: 30px;
     font-size: 2.25em;
-    line-height: 1.1;
+    line-height: 1.1em;
 }
 
 h1 {
     font-family: 'Kite One', sans-serif;
     color: #443a36;
     text-shadow: 2px 2px 1px #898e8c;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0em 0;
     font-size: 3.25em;
-    line-height: 1.1;
+    line-height: 1.1em;
 
 }
 
@@ -227,8 +225,8 @@ h3,
 h2,
 h1 {
     text-transform: capitalize;
-    font-weight: 700;
     font-family: 'Kite One', sans-serif;
+    font-weight: 700;
 }
 
 
@@ -249,8 +247,9 @@ p.three {
     font-style: italic;
     font-weight: 800;
     line-height: 1.5em;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-align: center;
+    margin-top: auto;
 }
 
 p.two,
@@ -266,7 +265,7 @@ p.two img {
     float: left;
     clear: right;
     margin-left: 0.5px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     margin-right: 4px;
     border: solid #f5e9d2 2px;
     padding: 1px;
@@ -277,7 +276,7 @@ p.one img {
     float: left;
     clear: right;
     margin-left: 0.5px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     margin-right: 4px;
     border: solid #f5e9d2 2px;
     padding: 1px;
@@ -304,21 +303,19 @@ p.one img {
 
 .image-fordham,
 .homeimage {
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .cammy {
-    font-style: italic;
-    font-size: 1.3em;
-    padding-bottom: 0px;
+    padding-bottom: 5px;
     padding-top: 10px;
-    margin-right: 10em;
+
 }
 
 .hometitle {
     font-style: italic;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     text-transform: capitalize;
 }
 
@@ -363,8 +360,8 @@ figcaption img {
     float: none;
     clear: none;
     margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: -10px;
+    margin-top: 5px;
     margin-right: 0px;
     border: solid #f5e9d2 2px;
     padding: 1px;
@@ -375,7 +372,7 @@ figcaption img {
     text-align: center;
     color: #b8bbba;
     font-weight: italic;
-    line-height: 1em;
+    line-height: 1.1em;
     font-size: 1.5em;
 }
 
@@ -385,8 +382,8 @@ figcaption img {
     color: #443a36;
     font-weight: 800;
     line-height: 1em;
-    font-size: 1.5em;
-    padding-top: .5em;
+    font-size: 1.6em;
+    padding-top: 0.2em;
 }
 
 .question {
@@ -405,14 +402,14 @@ figcaption img {
 
 .museum {
     font-family: 'Mclaren', cursive;
-    text-align: center;
-    text-shadow: 2px 2px 1px #898e8c;
+    text-align: left;
+    text-shadow: 2px 4px 3px #898e8c;
     color: #443a36;
     text-transform: capitalize;
     padding-top: 10px;
-    font-weight: 700;
-    line-height: 1.9em;
-    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 1.5em;
+    font-size: 2.0em;
 }
 
 /* mouse over link*/
@@ -425,7 +422,7 @@ a:active {
 /* The html and body selectors below set the base font for the entire page */
 
 html {
-    font-size: 1em;
+    font-size: 1.0em;
 }
 
 body {
@@ -434,7 +431,7 @@ body {
     padding: 0px;
     font-weight: 500;
     line-height: 1.5;
-    color: #333;
+    color: #443a36;
 }
 
 a:active {
@@ -543,7 +540,7 @@ This class makes the topnav look good on small screens (display the links vertic
         max-width: 100%;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: 200px) and (max-width : 600px){
         body {
             background-color: #443a36;
         }
@@ -562,7 +559,7 @@ This class makes the topnav look good on small screens (display the links vertic
     In this example the height is 400 and the width is 600
     400 / 600 = .66666667
     which is 66.6666667% */
-        padding-bottom: 80.85106382978723%;
+        padding-bottom: 80.0000000%;
         height: 0;
     }
 
