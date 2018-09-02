@@ -81,19 +81,19 @@ video {
     grid-area: hero;
 }
 
-article.maintitle {
+.maintitle {
     grid-area: maintitle;
 }
 
-article.intro {
+.intro {
     grid-area: intro;
 }
 
-article.aside {
+.aside {
     grid-area: aside;
 }
 
-article.map {
+.map {
     grid-area: map;
 }
 
