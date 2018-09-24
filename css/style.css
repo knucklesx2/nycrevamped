@@ -6,14 +6,7 @@ css/style.css
 
 @import url('https://fonts.googleapis.com/css?family=Kite+One%7cMarck+Script%7cMcLaren');
 
-/* Basic Responsive Images and Video */
 
-img,
-video {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-}
 
 .wrapper {
     width: 100%;
@@ -22,20 +15,29 @@ video {
 
 /*write in other layout code for mobile version that doesn't need the grid*/
 
-@supports (grid-area: auto) @media (min-width: 300px) and (max-width: 600px) {
+@supports (grid-area: auto) @media (max-width: 600px) {
     article.grid {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside map" "detail detail detail";
+        grid-template-areas:
+            "hero hero hero"
+            "maintitle aside map"
+            "intro aside map"
+            "detail detail detail";
 
         grid-gap: 20px;
     }
+
     article {
         display: grid;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero" "maintitle aside map" "intro aside map" "detail detail";
+        grid-template-areas:
+            "hero hero hero"
+            "maintitle aside map"
+            "intro aside map"
+            "detail detail detail";
 
         grid-gap: 20px;
     }
@@ -48,15 +50,20 @@ video {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside map" "detail detail detail";
+        grid-template-areas:
+            "hero hero hero"
+            "maintitle aside map"
+            "intro aside map"
+            "detail detail detail";
 
         grid-gap: 20px;
     }
+
     article {
         display: grid;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero" "maintitle aside" "intro map" "detail detail";
+        grid-template-areas: "hero hero""maintitle aside""intro map""detail detail";
 
         grid-gap: 20px;
     }
@@ -69,7 +76,7 @@ video {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: repeat(4, max-content);
-        grid-template-areas: "hero hero hero" "maintitle aside map" "intro aside map" "detail detail detail";
+        grid-template-areas: "hero hero hero""maintitle aside map""intro aside map""detail detail detail";
 
         grid-gap: 20px;
     }
@@ -103,7 +110,7 @@ video {
 
 /* end @supports */
 
-header {
+.header {
     background-color: #b8bbba;
     margin-bottom: 0px;
 }
@@ -122,6 +129,11 @@ article {
     line-height: 1.5em;
     font-size: 1.4em;
     margin-top: 10px;
+}
+
+
+.intro {
+    text-align: left;
 }
 
 ol {
@@ -397,14 +409,15 @@ figcaption img {
 
 .museum {
     font-family: 'Mclaren', cursive;
-    text-align: left;
+    text-align: center;
     text-shadow: 2px 4px 3px #898e8c;
     color: #443a36;
     text-transform: capitalize;
     padding-top: 10px;
+    padding-left: 20px;
     font-weight: 600;
     line-height: 1.5em;
-    font-size: 2.0em;
+    font-size: 1.75em;
 }
 
 /* mouse over link*/
@@ -472,7 +485,7 @@ div {
 
 .topnav ul li {
     float: left;
-    text-align: left;
+    text-align: center;
 }
 
 .topnav a {
@@ -517,11 +530,13 @@ This class makes the topnav look good on small screens (display the links vertic
     .topnav.responsive {
         position: relative;
     }
+
     .topnav.responsive li.icon {
         position: absolute;
         right: 0;
         top: 0;
     }
+
     .topnav.responsive li {
         float: none;
         display: block;
@@ -535,7 +550,7 @@ This class makes the topnav look good on small screens (display the links vertic
         max-width: 100%;
     }
 
-    @media only screen and (min-width: 200px) and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
         body {
             background-color: #443a36;
         }
